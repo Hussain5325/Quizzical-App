@@ -46,7 +46,7 @@ export default function App() {
         <Quiz data={data} score={scoreRef} render={handleCount} />
       )}
       {renderComponent === 2 && (
-        <Results score={scoreRef.current} render={setRenderComponent} />
+        <Results score={scoreRef} render={setRenderComponent} />
       )}
     </section>
   )
