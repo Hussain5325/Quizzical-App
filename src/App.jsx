@@ -32,6 +32,10 @@ export default function App() {
   function handleCount() {
     setRenderComponent(prev => prev + 1)
   }
+  
+  if (renderComponent === 0) {
+    return scoreRef = 0
+  }
 
   return (
     <section className='container'>
