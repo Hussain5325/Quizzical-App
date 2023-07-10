@@ -15,7 +15,9 @@ export default function Quiz({ data, score, render }) {
       e.target.style.backgroundImage = 'url(/cross.svg)'
     }
 
-    document.querySelector('.question-box').style.pointerEvents = 'none'
+    const box = document.querySelector('.question-box')
+    box.style.pointerEvents = 'none'
+    box.style.backgroundColor = 'blue'
   }
 
   const optionsArray = options[count]
