@@ -10,12 +10,13 @@ export default function Quiz({ data, score, render }) {
   function checkAnswer(userAnswer, e) {
     if (userAnswer === data[count].correct_answer) {
       e.target.style.backgroundImage = 'url(/correct.svg)'
+      document.querySelectorAll('.option').style.backgroundColor = 'blue'
+      e.target.style.backgroundColor = 'hsl(260, 75%, 70%)'
       score.current += 1
     } else {
       e.target.style.backgroundImage = 'url(/cross.svg)'
     }
     document.querySelector('.question-box').style.pointerEvents = 'none'
-    document.querySelectorAll('.option').style.backgroundColor = 'blue'
   }
 
   const optionsArray = options[count]
